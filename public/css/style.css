@@ -1,0 +1,250 @@
+body {
+    background-color: gold;
+}
+
+.containerJeux {
+    margin-top:5vh;
+    margin-bottom: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+}
+
+.container {
+    /* border: 10px solid black; */
+    background-color: gold;
+    width: 40vw;
+    height: 40vw;
+    flex-direction: column;
+
+}
+
+.ligne1 {
+    /* border: 3px solid black; */
+    width: 100%;
+    height: 33%;
+}
+
+.ligne2 {
+    /* border: 3px solid black; */
+    width: 100%;
+    height: 33%;
+}
+
+.ligne3 {
+    /* border: 3px solid black; */
+    width: 100%;
+    height: 33%;
+}
+.bloc{
+    color: transparent;
+}
+.blocLigne1 {
+    border: 3px solid black;
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blocLigne2 {
+    border: 3px solid black;
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blocLigne3 {
+    border: 3px solid black;
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cross {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    border-radius: 50% 50%;
+    position: relative;
+    transform: scale(1.3);
+}
+
+.cross::before {
+    background: #888;
+    position: absolute;
+    display: block;
+    content: "";
+    width: 70%;
+    height: 6%;
+    top: 47%;
+    left: 15%;
+    transform: rotate(45deg);
+}
+
+.cross::after {
+    background: #888;
+    position: absolute;
+    display: block;
+    content: "";
+    width: 6%;
+    height: 70%;
+    left: 47%;
+    top: 15%;
+    transform: rotate(45deg);
+}
+
+.circle{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: #555 solid 8px;
+}
+.win ,.loose,.draw{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.win{
+    color: green;
+}
+.draw{
+    color: black;   
+}
+.loose{
+    color: red;
+}
+.txtResultat{
+    font-size: 90px;
+    font-weight: bold;
+}
+.retry{
+    border: 1px solid black;
+    font-size: larger;
+    cursor: pointer;
+    height: 50px;
+    color: black;
+    display: flex;
+    background-color: rgb(254, 222, 44);
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+.retry:hover{
+    transform: scale(1.05);
+}
+/* _______ABSOLUTE NE JOUE PAS_____ */
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Fond transparent */
+    z-index: 9999; /* Assurez-vous que la superposition est au-dessus de tout le reste */
+    pointer-events: none; /* Les clics passent à travers la superposition */
+}
+
+/* _________TIMER NE JOUE PAS_____ */
+#timer{
+    position: fixed;
+    top: 0;
+    font-size: xx-large;
+    margin-left: 10vw;
+    margin-top: 10dvh;
+    background-color: white;
+    padding: 20px;
+}
+
+
+.score-container {
+    position: fixed;
+    top: 0;
+    margin-top: 20vh;
+    margin-left: 10vw;
+    background-color: rgb(254, 222, 44); 
+    color: #333; 
+    padding: 10px; 
+    border-radius: 10px; 
+    display: inline-block; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    font-family: Arial, sans-serif; 
+}
+
+.score-label {
+    font-weight: bold; 
+    margin-right: 5px; 
+}
+
+.score {
+    font-size: 24px;
+    vertical-align: middle;
+}
+/* TABLETTES */
+@media (min-width: 701px) and (max-width: 1000px) {
+    .cross {
+        width: 60px;
+        height: 60px;
+        margin: 50px auto;
+    }  
+    .circle{
+        width: 60%;
+        height: 60%;
+        /* border: #555 solid 4px; */
+    }
+    h1 {
+        font-size:xx-large;
+    }
+    .txtResultat{
+        font-size: xx-large;
+    }
+    .score {
+        font-size: medium;
+        vertical-align: middle;
+    }
+}
+ /* TELEPHONE */
+@media (max-width: 700px){
+    h1 {
+        font-size:xx-large;
+    }
+    .cross {
+        width: 40px;
+        height: 40px;
+        margin: 20px auto;
+    }  
+    .score-container{
+        padding: 5px;
+    }
+    .txtResultat{
+        font-size: xx-large;
+    }
+    .score {
+        font-size: medium;
+        vertical-align: middle;
+    }
+    .circle{
+        width: 60%;
+        height: 60%;
+        border: #555 solid 4px;
+
+    }
+}

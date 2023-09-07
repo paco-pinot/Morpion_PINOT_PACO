@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morpion</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="icon" type="image/x-icon" href="./public/img/morpionImg.png">
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <div class="timerContainer">
+    <div class="score-container">
+        <span class="score-label">Score:</span>
+        <span class="score">0</span>
+    </div>
+        <div id="timer" style="display: none;"></div>
+    </div>
+
+    <div class="win">
+       <div class="txtResultat">YOU WIN !</div> 
+       <div class="retry">Retry</div>
+    </div>
+    <div class="loose">
+       <div class="txtResultat">YOU LOOSE !</div> 
+       <div class="retry">Retry</div>
+    </div>
+    <div class="draw">
+        <div class="txtResultat">IT'S A DRAW !</div> 
+        <div class="retry">Retry</div>
+     </div>
+    <h1>Morpion</h1>
+    <div class="containerJeux">
+        <div class="container d-flex">
+            <div class="ligne1 d-flex">
+                <div class="blocLigne1 bloc none">1</div>
+                <div class="blocLigne1 bloc none ">2</div>
+                <div class="blocLigne1 bloc none ">3</div>
+            </div>
+            <div class="ligne2 d-flex">
+                <div class="blocLigne2 bloc none ">4</div>
+                <div class="blocLigne2 bloc none ">5</div>
+                <div class="blocLigne2 bloc none ">6</div>
+            </div>
+            <div class="ligne3 d-flex">
+                <div class="blocLigne3 bloc none ">7</div>
+                <div class="blocLigne3 bloc none ">8</div>
+                <div class="blocLigne3 bloc none ">9</div>
+            </div>
+        </div>
+    </div>
+    <script src="./public/js/main.js"></script>
+
+</body>
+
+</html>
