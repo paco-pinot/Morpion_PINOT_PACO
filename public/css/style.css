@@ -1,6 +1,9 @@
 body {
     background-color: gold;
 }
+.d-flex {
+    display: flex;
+}
 
 .containerJeux {
     margin-top:5vh;
@@ -10,10 +13,6 @@ body {
     align-items: center;
 }
 
-.d-flex {
-    display: flex;
-}
-
 h1 {
     text-align: center;
     margin-top: 50px;
@@ -21,7 +20,6 @@ h1 {
 }
 
 .container {
-    /* border: 10px solid black; */
     background-color: gold;
     width: 40vw;
     height: 40vw;
@@ -30,19 +28,16 @@ h1 {
 }
 
 .ligne1 {
-    /* border: 3px solid black; */
     width: 100%;
     height: 33%;
 }
 
 .ligne2 {
-    /* border: 3px solid black; */
     width: 100%;
     height: 33%;
 }
 
 .ligne3 {
-    /* border: 3px solid black; */
     width: 100%;
     height: 33%;
 }
@@ -158,9 +153,9 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0); /* Fond transparent */
-    z-index: 9999; /* Assurez-vous que la superposition est au-dessus de tout le reste */
-    pointer-events: none; /* Les clics passent à travers la superposition */
+    background: rgba(0, 0, 0, 0); 
+    z-index: 9999; 
+    pointer-events: none; 
 }
 
 /* _________TIMER NE JOUE PAS_____ */
@@ -208,7 +203,6 @@ h1 {
     .circle{
         width: 60%;
         height: 60%;
-        /* border: #555 solid 4px; */
     }
     h1 {
         font-size:xx-large;
