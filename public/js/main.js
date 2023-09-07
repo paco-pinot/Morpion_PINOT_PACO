@@ -43,7 +43,7 @@ function disableClicksFor4Seconds() {
     setTimeout(function () {
         // Réactive les clics après 4 secondes
         enableClicks();
-    }, 4000); 
+    }, 2001); 
 }
 
 //----------------------------- FONCTION POUR ENLEVER ELEMENT DU TABLEAU
