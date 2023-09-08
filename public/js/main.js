@@ -7,7 +7,7 @@ let containerJeux = document.querySelector('.containerJeux')
 let win =document.querySelector('.win')
 let loose =document.querySelector('.loose')
 let draw = document.querySelector('.draw')
-let retry = document.querySelector('.retry')
+let retryButtons = document.querySelectorAll('.retry');
 let score = document.querySelector('.score')
 
 let blocsLigne1 = document.querySelectorAll(".blocLigne1")
@@ -204,8 +204,10 @@ function winLoose() {
 
 }
 //______________________________________________ REESAYER LE JEU
-retry.addEventListener('click', function () {
-    resetGame(); 
+retryButtons.forEach(retryButton => {
+    retryButton.addEventListener('click', function () {
+        resetGame() 
+    });
 });
 
 // ________________________________________________________LOGIQUE DU JEU _________________________________________________________
