@@ -159,7 +159,7 @@ h1 {
 }
 
 /* _________TIMER NE JOUE PAS_____ */
-#timer{
+/* #timer{
     position: fixed;
     top: 0;
     font-size: xx-large;
@@ -167,7 +167,7 @@ h1 {
     margin-top: 10dvh;
     background-color: white;
     padding: 20px;
-}
+} */
 
 
 .score-container {
@@ -227,6 +227,10 @@ h1 {
     }  
     .score-container{
         padding: 5px;
+        margin-top: 10px;
+        margin-left: 10px;
+        top: 0;
+        left: 0;
     }
     .txtResultat{
         font-size: xx-large;
